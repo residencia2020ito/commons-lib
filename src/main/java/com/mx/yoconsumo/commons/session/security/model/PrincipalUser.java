@@ -3,6 +3,7 @@ package com.mx.yoconsumo.commons.session.security.model;
 import java.io.Serializable;
 import java.security.Principal;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import lombok.Data;
@@ -24,7 +25,21 @@ public class PrincipalUser implements Principal, Serializable {
 	 */
 	public static final String ATTRIBUTE_SESSION_NAME = PrincipalUser.class.getName();
 	
+	/**
+	 * id del usuario
+	 */
+	
 	private String id;
+	
+	/**
+	 * token para validacion
+	 */
+	private String token;
+	
+	/**
+	 * id del usuario
+	 */
+	private Date expireToken;
 	
 	/**
 	 * id del usuario
