@@ -22,7 +22,7 @@ public class CustomExceptionHandler {
 		ResponseTO response = new ResponseTO();
         
 		notification.setCodigo("0000000001");
-        notification.setDescripcion("Error no controlado");
+        notification.setDescripcion("Error no controlado: "+ ex.getMessage());
         response.addNotification(notification);
         return new ResponseEntity<ResponseTO>(response, HttpStatus.INTERNAL_SERVER_ERROR);
     }
